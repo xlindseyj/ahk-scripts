@@ -3,12 +3,14 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-^j::
-MsgBox, Wow!
-MsgBox, There are
-Run, notepad.exe
-WinActivate, Untitled - Notepad
-WinWaitActive, Untitled - Notepad
-Send, 7 lines{!}{Enter}
-SendInput, inside the CTRL{+}J hotkey.
-return
+Sleep 5000
+Loop
+{
+	Click
+	RandSleep(500,750)
+}
+
+RandSleep(x,y) {
+	Random, rand, %x%, %y%
+	Sleep %rand%
+}
