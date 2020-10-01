@@ -104,53 +104,18 @@ loop {
 		Random, a150, 130, 170
 		Random, a1600, 1601, 1801
 		Random, a2400, 2401, 2601
-	
-		
 			
-	;;HIGH ALCH & ITEM;;
-		Mousemove, highAlchX, highAlchY, 3
-		sleep a150
-		click
-		sleep a150
-		Mousemove, itemX, itemY, 3
-		sleep a50
-		click
-		sleep a50
-		if (antibanCounter = antibanRandom or antibanCounter > 10) {
-			mouseOffScreen()
-			antibanCounter = 0
-		} else {
-			randomMouseMove()
-		}
-		sleep a2400
+	;;BANKING;;
+		
+		
+	;;MAKE WINE;;
 	
-	;;STUN & NPC;;
-		Mousemove, stunX, stunY, 2
-		sleep a150
-		click
-		sleep a150
-		Mousemove, npcX, npcY, 2
-		sleep a50
-		click
-		sleep a50
-		randomMouseMove()
-		sleep a1600
-	
-	castCounter++
-	antibanCounter++
 	
 	if (castCounter = castRandom) {
 		logout()
 		sleep 1000
 		Msgbox, Script complete - Casts: %castCounter%
 		exitapp
-	} else {
-		continue
-	}
-	
-	if (mouseOffScreenCounter = checkSkillRandom or mouseOffScreenCounter > 60) {
-		mouseOffScreenCounter = 0
-		checkCurrentEXP()
 	} else {
 		continue
 	}
