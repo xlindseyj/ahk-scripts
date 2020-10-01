@@ -1,5 +1,5 @@
 # AHK Scripts
-### Author: Jake Lindsey
+## Instructions
 1. Compile
 2. Run RuneLite
 3. Run
